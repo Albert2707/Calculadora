@@ -2,11 +2,11 @@
 
 Calculadora de indices academicos
 
-## Client
+### Client
 pnpm install
 pnpm dev
 
-## api
+### api
 pnpm install
 tsc -w
 pnpm start
