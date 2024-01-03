@@ -2,13 +2,11 @@
 
 Calculadora de indices academicos
 
-## Para correr el proyecto:
+## Client
+pnpm install <br>.
+pnpm dev <br>.
 
-### Client
-pnpm install
-pnpm dev
-
-### api
-pnpm install
-tsc -w
+## Api
+pnpm install <br>.
+tsc -w <br>.
 pnpm start
