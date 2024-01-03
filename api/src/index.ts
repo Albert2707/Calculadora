@@ -1,0 +1,23 @@
+import express, { json } from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import helmet from "helmet";
+import studentRoute from "./routes/student.route";
+import professorRoute from "./routes/professor.route";
+import authRoute from "./routes/auth.route";
+// import cookieParser from "cookie-parser";
+import morgan from "morgan";
+const app = express();
+dotenv.config();
+app.use(json());
+app.use(cors({ origin: "http://localhost:5173" }));
+app.use(helmet());
+app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: true }));
+const PORT: number = parseInt(process.env.PORT as string, 10);
+app.use("/api", authRoute);
+app.use("/api", studentRoute);
+app.use("/api", professorRoute);
+app.listen(PORT, () => {
+  console.log("Listening on port " + PORT);
+});

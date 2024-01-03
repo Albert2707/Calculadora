@@ -1,0 +1,152 @@
+.login {
+  min-height: 100dvh;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  .container {
+    max-width: 1366px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    form {
+      display: flex;
+      width: 300px;
+      flex-direction: column;
+      //gap:20px;
+
+      h1 {
+        font-weight: 500;
+        align-self: center;
+      }
+
+      .id {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        caret-color: #ff000d;
+        border: 1px solid #e3e3e3;
+        outline: none;
+      }
+      .pass {
+        display: flex;
+        border-radius: 5px;
+        gap: 2px;
+        padding: 14px;
+        justify-content: space-between;
+        border: 1px solid #e3e3e3;
+        align-items: center;
+        overflow: hidden;
+        background-color: #fff;
+
+        input {
+          background-color: transparent;
+          border: none;
+          width: 100%;
+          outline: none;
+          caret-color: #ff000d;
+        }
+        #btn {
+          display: flex;
+          justify-content: center;
+          border: none;
+          color: #ff000d;
+          background-color: transparent;
+          align-items: center;
+          cursor: pointer;
+        }
+        #btn:hover {
+          color: #cb0026;
+          transition: all 1s;
+        }
+        #btn > svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+      a {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+        margin-top: 5px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+      }
+      .submit {
+        background-color: #e4002b;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 15px;
+        height: 48px;
+        color: white;
+        font-weight: 500;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .loader {
+          width: 25px;
+          height: 25px;
+          border: 3px solid #fff;
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+          box-sizing: border-box;
+          animation: rotation 1s linear infinite;
+        }
+        .loader::after {
+          content: "";
+          box-sizing: border-box;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-bottom-color: #f9810a;
+        }
+
+        @keyframes rotation {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    .other {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .line {
+        height: 2px;
+        border-radius: 5px;
+        width: 40%;
+        background-color: rgb(229 231 235);
+      }
+      .middle {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+    .moodle {
+      cursor: pointer;
+      img {
+        width: 100px;
+        object-fit: cover;
+      }
+    }
+  }
+}
